@@ -21,12 +21,15 @@ namespace WebLendLease
             loggerFactory.AddConsole(LogLevel.Debug);
             
             app.UseStaticFiles();
+            app.UseStatusCodePages();
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseMvc();
+            //app.UseMvc();
+
+           app.UseMvcWithDefaultRoute();
         }
 
     }
