@@ -4,6 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebLendLease
 {
+     public class HomeController : Controller
+    {
+        [HttpGet("/")]
+        public IActionResult Index() => View();
+    }
+    
     [Route("/api/Customer")]
     public class CustomerController
     {
